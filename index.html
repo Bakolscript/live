@@ -1,18 +1,17 @@
-<html>
-<head>
-<title></title>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-</head>
-<body>
-<div id="header"></div>
-  
-  
-  
-  <div id="content">
+<!doctype html>
+<html ng-app=''>
+  <head>
+     <title>How to use ng-include directive in AngularJS</title>
+     <link href="style.css" rel='stylesheet' type='text/css'>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
-	  <body style="height:1500px">
+  </head>
+  <body >
+     <!-- header section -->
+     <header ng-include="'header.html'"></header>
+     <div class='content'>
 
-<div class="container-fluid">
+	     <div class="container-fluid">
   <br>
   <h3>Sticky Navbar</h3>
   <p>A sticky navigation bar stays fixed at the top of the page when you scroll past it.</p>
@@ -38,14 +37,10 @@
   <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
 </div>
 
-</body>
-	  
-	  
-</div><br />
-<div id="footer"></div>
-<script> 
-  $("#header").load("header.html"); 
-  $("#footer").load("footer.html"); 
-</script> 
-</body>
+	     
+     </div>
+     <!-- footer section -->
+     <footer ng-include="'footer.html'"></footer>
+
+  </body>
 </html>
